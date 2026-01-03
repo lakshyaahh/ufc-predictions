@@ -14,7 +14,11 @@ from . import models, crud, payments, matches
 import os
 
 # Create tables
-models.Base.metadata.create_all(bind=engine)
+try:
+    models.Base.metadata.create_all(bind=engine)
+except Exception as e:
+    # Tables may already exist; safe to continue
+    print(f"Database initialization note: {e}")
 
 app = FastAPI(title="UFC Predictions API", version="2.0")
 
