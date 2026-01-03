@@ -7,7 +7,8 @@ sqlalchemy==2.0.23
 python-multipart==0.0.6
 aiofiles==23.1.0
 python-dotenv==1.0.1
-pyjwt==2.8.1
+# Use a published PyJWT wheel compatible with Python 3.11
+pyjwt==2.10.1
 requests==2.31.0
 stripe==5.10.0
 bcrypt==4.1.1
