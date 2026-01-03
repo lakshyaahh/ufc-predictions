@@ -3,7 +3,6 @@ import os
 from datetime import datetime, timedelta
 from fastapi import Depends, HTTPException
 from fastapi.security import HTTPBearer
-from starlette.security import HTTPAuthCredentials
 from typing import Optional
 from .security import hash_password, verify_password
 
@@ -24,7 +23,7 @@ def create_access_token(user_id: int, username: str, expires_delta: Optional[tim
     return encoded_jwt
 
 
-def verify_token(credentials: HTTPAuthCredentials = Depends(security)) -> dict:
+def verify_token(credentials = Depends(security)) -> dict:
     """Verify JWT token and return payload"""
     token = credentials.credentials
     try:
