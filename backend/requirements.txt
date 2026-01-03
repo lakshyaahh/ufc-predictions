@@ -14,7 +14,8 @@ requests==2.31.0
 stripe==2.70.0
 bcrypt==4.1.1
 passlib==1.7.4
-pydantic==2.0.0
+# allow FastAPI to pull a compatible pydantic version
+# pydantic==2.0.0 (removed due to conflict with fastapi 0.104.1)
 email-validator==2.0.0
 
 
