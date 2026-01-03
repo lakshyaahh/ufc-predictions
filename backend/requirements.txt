@@ -10,7 +10,8 @@ python-dotenv==1.0.1
 # Use a published PyJWT wheel compatible with Python 3.11
 pyjwt==2.10.1
 requests==2.31.0
-stripe==5.10.0
+# Pin stripe to a release available on PyPI for Python 3.11
+stripe==2.70.0
 bcrypt==4.1.1
 passlib==1.7.4
 pydantic==2.0.0
