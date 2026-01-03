@@ -2,7 +2,8 @@ import jwt
 import os
 from datetime import datetime, timedelta
 from fastapi import Depends, HTTPException
-from fastapi.security import HTTPBearer, HTTPAuthCredentials
+from fastapi.security import HTTPBearer
+from starlette.security import HTTPAuthCredentials
 from typing import Optional
 from .security import hash_password, verify_password
 
