@@ -1,0 +1,3 @@
+RedFighter,BlueFighter,Date,Location,Country,WeightClass,Gender,NumberOfRounds,RedAge,BlueAge,RedHeightCms,BlueHeightCms,RedReachCms,BlueReachCms,RedCurrentWinStreak,BlueCurrentWinStreak,RedCurrentLoseStreak,BlueCurrentLoseStreak,RedWinsByKO,BlueWinsByKO,RedWinsBySubmission,BlueWinsBySubmission,RedWins,BlueWins,RedLosses,BlueLosses,Winner,ReachDiff,HeightDiff,AgeDiff,WinStreakDiff,LoseStreakDiff,KODiff,SubDiff,WinDiff,LossDiff
+Conor McGregor,Dustin Poirier,2021-01-23,Abu Dhabi,UAE,Lightweight,MALE,3,32,32,175,177,188,183,1,2,0,0,19,27,1,7,22,27,5,7,BlueFighter,-5,-2,0,-1,0,-8,6,-5,-2
+Jon Jones,Daniel Cormier,2015-01-03,Las Vegas,USA,Light Heavyweight,MALE,5,27,35,193,180,215,185,12,5,0,1,9,10,6,4,21,22,1,1,RedFighter,30,13,-8,7,-1,-1,2,-1,0

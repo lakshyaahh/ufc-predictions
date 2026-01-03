@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ufc-predictions-api
+spec:
+  selector:
+    app: ufc-predictions
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ufc-predictions-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ufc-predictions
+  template:
+    metadata:
+      labels:
+        app: ufc-predictions
+    spec:
+      containers:
+        - name: api
+          image: yourdockerreg/ufc-predictions:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: ufc-secrets
+                  key: secret-key
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: ufc-secrets
+                  key: database-url
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
